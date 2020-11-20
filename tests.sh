@@ -24,7 +24,7 @@ _SCRIPT_PWD="$PWD"
 COMPACT=0
 __tmp_output=""
 only_test=""
-SYSTEM=`uname -s 2>/dev/null` || SYSTEM="unknown"
+SYSTEM=$(uname -s 2>/dev/null) || SYSTEM="unknown"
 
 home_expand() {
   echo "$1" | grep -q "^~/" && echo "$HOME${1#\~}" || echo "$1"
@@ -1316,4 +1316,3 @@ Skipped:      $SKIPPED
 }
 
 rm -rf $TEST_DIR # clean mess
-
