@@ -277,6 +277,8 @@ create_text() {
       ;;
     *)
       DICT_WORDS=/usr/share/dict/words
+      ;;
+    esac
   echo $(ruby -e 'a=STDIN.readlines;500.times do;b=[];20.times do;
            b << a[rand(a.size)].chomp end; puts b.join(" "); end' \
      < $DICT_WORDS ) | head -c $chars
